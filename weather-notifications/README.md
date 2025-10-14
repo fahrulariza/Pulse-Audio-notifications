@@ -229,12 +229,15 @@ crontab -e
 Error: "File konfigurasi tidak ditemukan"
 - Pastikan file konfigurasi ada di direktori yang sama dengan script
 - Pastikan nama file sesuai (termasuk ekstensi .txt)
+
 Error: "Tidak ada respons dari API"
 - Periksa koneksi internet router
 - Pastikan API key valid dari Tomorrow.io
+
 Error: "File audio tidak ditemukan"
 - Periksa struktur direktori audio
 - Pastikan semua file WAV sudah diupload
+
 Error: PulseAudio connection refused
 - Pastikan PulseAudio berjalan: pulseaudio --start
 - Cek user permissions
