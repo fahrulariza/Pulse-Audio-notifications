@@ -21,7 +21,7 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi lay
 ## 📋 Persyaratan Sistem
   
 <br>
-1. Router dengan OpenWrt (minimal versi 19.07)
-2. Koneksi internet aktif
-3. Package curl dan pulseaudio-utils terinstall
+1. Router dengan OpenWrt / Armbian<br>
+2. Koneksi internet aktif<br>
+3. Package curl dan pulseaudio-utils terinstall<br>
 <br>
