@@ -30,7 +30,7 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi lay
 ## 📁 Struktur Direktori
 
 Buat struktur direktori berikut di router OS OpenWrt / Armbian kamu seperti ini:<br>
-`
+```
 /www/
 ├── audio/
 │   ├── cuaca/
@@ -39,4 +39,12 @@ Buat struktur direktori berikut di router OS OpenWrt / Armbian kamu seperti ini:
 │   └── angka/
 └── assisten/
     └── laporan/
-`
+```
+<br>
+Perintah untuk Membuat Direktori:
+```
+mkdir -p /www/audio/cuaca/kondisi
+mkdir -p /www/audio/cuaca/tips
+mkdir -p /www/audio/angka
+mkdir -p /www/assisten/laporan
+```
