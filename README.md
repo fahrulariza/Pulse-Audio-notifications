@@ -10,12 +10,12 @@
 [![Open Issues](https://img.shields.io/github/issues/fahrulariza/Pulse-Audio-notifications)](https://github.com/fahrulariza/Pulse-Audio-notifications/issues)
 
 <h1>Kumpulan Script dan File bahan Audio Notifikasi </h1>
-<p>Kelola router OpenWrt dan Armbian Anda dengan mudah dan kreatif!</p>
+<p>Kelola OS OpenWrt dan Armbian Anda dengan mudah dan kreatif!</p>
 </div>
 
 <br>
 
-## Konfigurasi Pulseaudio
+## Konfigurasi Pulseaudio di OS OpenWrt dan Armbian
 - [**Install dan Konfigurasi Pulseaudio**](https://github.com/fahrulariza/OpenWRT-Pulse-Audio)
 
 ## 🚀 Script Notifikasi
