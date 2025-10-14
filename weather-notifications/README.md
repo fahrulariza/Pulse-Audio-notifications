@@ -81,10 +81,8 @@ AUDIO_DERAJAT_CELSIUS="${AUDIO_ANGKA_DIR}/derajat_celsius.wav"
 ```
 
 3.2 Penjelasan Konfigurasi
-<b>API_KEY</b>: Dapatkan dari Tomorrow.io<br>
-
-LAT/LON: Koordinat latitude dan longitude lokasi Anda<br>
-
-LOCATION_NAME: Nama lokasi untuk laporan audio<br>
-
-VOLUME: Sesuaikan volume sesuai kebutuhan (0-65536)<br>
+<br>
+3.2.1 <b>API_KEY</b>: Dapatkan dari Tomorrow.io<br>
+3.2.2 <b>LAT/LON</b>: Koordinat latitude dan longitude lokasi Anda<br>
+3.2.3 <b>LOCATION_NAME</b>: Nama lokasi untuk laporan audio<br>
+3.2.4 <b>VOLUME</b>: Sesuaikan volume sesuai kebutuhan (0-65536)<br>
