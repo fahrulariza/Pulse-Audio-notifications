@@ -55,13 +55,14 @@ mkdir -p /www/assisten/laporan
 ## 📄 Langkah 3: File Konfigurasi
 
 <br>
-### 3.1 Buat File Konfigurasi (audio_berita-cuaca.txt)
+### 3.1 Buat File Konfigurasi (Pulse-Audio-weather-notifications.txt)
 
-**Simpan file berikut di /www/assisten/audio_berita-cuaca.txt:**<br>
+**Simpan file berikut di /www/assisten/Pulse-Audio-weather-notifications.txt:**<br>
 
 ```
 # Konfigurasi untuk Script Audio Berita Cuaca
-# File: audio_berita-cuaca.txt
+# File: Pulse-Audio-weather-notifications.txt
+# github: https://github.com/fahrulariza
 
 # --- KONFIGURASI API DAN LOKASI ---
 API_KEY="dJHoRVjW6vyAbgmIkPLlevA1Q"
@@ -175,3 +176,8 @@ Letakkan di `/www/audio/angka/`:
 - Pastikan kualitas audio jelas dan tidak ada noise
 - Durasi setiap file disarankan 1-3 detik untuk efisiensi
 - File tips tidak akan diputar pada malam hari (setelah jam 17:00 sampai 06:00)
+
+## 🎵 Langkah 5: Script Utama
+
+### 5.1 Buat File Script (`audio_berita-cuaca.sh`)
+Simpan script utama yang telah di unduh di `/www/assisten/Pulse-Audio-weather-notifications.sh`
