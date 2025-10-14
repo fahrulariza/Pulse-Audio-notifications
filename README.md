@@ -15,6 +15,9 @@
 
 <br>
 
+## Konfigurasi Pulseaudio
+- [**Install dan Konfigurasi Pulseaudio**](https://github.com/fahrulariza/OpenWRT-Pulse-Audio)
+
 ## 🚀 Script Notifikasi
 - [**Notifikasi Cuara**](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/weather-notifications)
 - **Audio Adzan**
