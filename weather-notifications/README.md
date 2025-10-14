@@ -30,6 +30,7 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi lay
 ## 📁 Langkah 2: Struktur Direktori
 
 Buat struktur direktori berikut di router OS OpenWrt / Armbian kamu seperti ini:<br>
+
 ```
 /www/
 ├── audio/
