@@ -18,6 +18,8 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi lay
 
 <p>
 ## 📋 Persyaratan Sistem
+  <br>
   1. Router dengan OpenWrt (minimal versi 19.07)
   2. Koneksi internet aktif
   3. Package curl dan pulseaudio-utils terinstall
+  <br>
