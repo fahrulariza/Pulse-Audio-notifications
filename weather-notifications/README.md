@@ -84,7 +84,10 @@ AUDIO_DERAJAT_CELSIUS="${AUDIO_ANGKA_DIR}/derajat_celsius.wav"
 
 ### 3.2 Penjelasan Konfigurasi
 
-1. **API_KEY**: Dapatkan dari [Tomorrow.io](https://www.tomorrow.io/)
-2. **LAT/LON**: Koordinat latitude dan longitude lokasi Anda  
-3. **LOCATION_NAME**: Nama lokasi untuk laporan audio
-4. **VOLUME**: Sesuaikan volume sesuai kebutuhan (0-65536)
+| No | Parameter | Penjelasan |
+|----|-----------|------------|
+| 1 | **API_KEY** | Dapatkan dari [Tomorrow.io](https://www.tomorrow.io/) |
+| 2 | **LAT/LON** | Koordinat latitude dan longitude lokasi Anda |
+| 3 | **LOCATION_NAME** | Nama lokasi untuk laporan audio |
+| 4 | **VOLUME** | Sesuaikan volume sesuai kebutuhan (0-65536) |
+
