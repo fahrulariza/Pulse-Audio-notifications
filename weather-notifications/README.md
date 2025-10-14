@@ -50,7 +50,10 @@ mkdir -p /www/audio/angka
 mkdir -p /www/assisten/laporan
 ```
 <br>
+
 ## 📄 Langkah 3: File Konfigurasi
+
+<br>
 3.1 Buat File Konfigurasi (audio_berita-cuaca.txt)<br>
 Simpan file berikut di /www/assisten/audio_berita-cuaca.txt:<br>
 
