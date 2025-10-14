@@ -84,7 +84,7 @@ AUDIO_INTRO_SUHU="${AUDIO_ANGKA_DIR}/introsuhu.wav"
 AUDIO_DERAJAT_CELSIUS="${AUDIO_ANGKA_DIR}/derajat_celsius.wav"
 ```
 
-### 3.2 Penjelasan Konfigurasi
+### 3.2 Penjelasan Konfigurasi API dan Lokasi
 
 | No | Parameter | Penjelasan |
 |----|-----------|------------|
@@ -92,6 +92,16 @@ AUDIO_DERAJAT_CELSIUS="${AUDIO_ANGKA_DIR}/derajat_celsius.wav"
 | 2 | **LAT/LON** | Koordinat latitude dan longitude lokasi Anda |
 | 3 | **LOCATION_NAME** | Nama lokasi untuk laporan audio |
 | 4 | **VOLUME** | Sesuaikan volume sesuai kebutuhan (0-65536) |
+
+| No | Parameter | Penjelasan |
+|----|-----------|------------|
+| 1 | **AUDIO_DIR** | Lokasi Utama Audio Folder [`Cuaca`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/cuaca) |
+| 2 | **AUDIO_INTRO** | FILE Audio untuk intro Pembuka [`lapor_berita_cuaca.wav`](https://github.com/fahrulariza/Pulse-Audio-notifications/blob/master/www/audio/cuaca/lapor_berita_cuaca.wav) |
+| 3 | **AUDIO_KONDISI_DIR** | Lokasi Audio Folder [`Kondisi`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/cuaca/kondisi) |
+| 4 | **AUDIO_TIPS_DIR** | Lokasi Audio Folder [`tips`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/cuaca/tips) |
+| 2 | **AUDIO_ANGKA_DIR** | Lokasi Audio Folder [`angka`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/angka) |
+| 2 | **AUDIO_INTRO_SUHU** | FILE Audio untuk intro [`introsuhu.wav`](https://github.com/fahrulariza/Pulse-Audio-notifications/blob/master/www/audio/angka/introsuhu.wav) |
+| 2 | **AUDIO_DERAJAT_CELSIUS** | FILE Audio untuk intro [`derajat_celsius.wav`](https://github.com/fahrulariza/Pulse-Audio-notifications/blob/master/www/audio/angka/derajat_celsius.wav) |
 
 ## 🎵 Langkah 4: File Audio yang Diperlukan
 
