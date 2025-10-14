@@ -1,5 +1,6 @@
 # Konfigurasi untuk Script Audio Berita Cuaca
 # File Format: txt
+# https://github.com/fahrulariza
 
 # --- KONFIGURASI API DAN LOKASI ---
 API_KEY="dJHoRVjW6vyAbTrUkbPLlevA1Q"
@@ -17,4 +18,5 @@ AUDIO_KONDISI_DIR="${AUDIO_DIR}/kondisi"
 AUDIO_TIPS_DIR="${AUDIO_DIR}/tips"
 AUDIO_ANGKA_DIR="/www/audio/angka"
 AUDIO_INTRO_SUHU="${AUDIO_ANGKA_DIR}/introsuhu.wav"
+
 AUDIO_DERAJAT_CELSIUS="${AUDIO_ANGKA_DIR}/derajat_celsius.wav"
