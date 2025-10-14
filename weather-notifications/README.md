@@ -23,5 +23,20 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi lay
 <br>
 1. Router dengan OpenWrt / Armbian<br>
 2. Koneksi internet aktif<br>
-3. Package curl dan pulseaudio-utils terinstall<br>
+3. Package curl
+4. Pulseaudio terinstall dan berfungsi dengan baik. tutorialnya disini [here](https://github.com/fahrulariza/OpenWRT-Pulse-Audio/blob/master/README.md)
 <br>
+
+## 📁 Struktur Direktori
+
+Buat struktur direktori berikut di router OS OpenWrt / Armbian kamu seperti ini:<br>
+`
+/www/
+├── audio/
+│   ├── cuaca/
+│   │   ├── kondisi/
+│   │   └── tips/
+│   └── angka/
+└── assisten/
+    └── laporan/
+`
