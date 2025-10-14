@@ -182,9 +182,32 @@ Letakkan di `/www/audio/angka/`:
 ### 5.1 Buat File Script (`audio_berita-cuaca.sh`)
 Simpan script utama yang telah di unduh di `/www/assisten/Pulse-Audio-weather-notifications.sh`
 
-### 5.1 5.2 Berikan Hak Akses Eksekusi
+### 5.2 Berikan Hak Akses Eksekusi
 ```
-chmod +x /www/assisten/audio_berita-cuaca.sh
+dos2unix /www/assisten/Pulse-Audio-weather-notifications.sh
+dos2unix /www/assisten/Pulse-Audio-weather-notifications.txt
+chmod +x /www/assisten/Pulse-Audio-weather-notifications.sh
 ```
 
+## 🔧 Langkah 6: Testing
+
+### 6.1 Test Manual
+Jalankan script secara manual untuk testing:
+```
+cd /www/assisten/
+./Pulse-Audio-weather-notifications.sh
+```
+
+### 6.2 Expected Output
+Jika berhasil, Anda akan melihat output seperti:
+```
+Debug: Memuat konfigurasi dari: /www/assisten/audio_berita-cuaca.txt
+Debug: Waktu siang (14:00), volume diatur ke 62768.
+Debug: Mencoba mengambil data dari Tomorrow.io: https://api.tomorrow.io/v4/timelines?...
+Debug: Suhu: 28.5
+Debug: Kode Cuaca: 1001
+Info: weatherCode tidak berubah (1001) dan bukan waktu wajib putar. Tidak memutar notifikasi.
+```
+
+## ⏰ Langkah 7: Otomatisasi dengan Cron
 
