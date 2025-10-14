@@ -106,7 +106,7 @@ AUDIO_DERAJAT_CELSIUS="${AUDIO_ANGKA_DIR}/derajat_celsius.wav"
 ## 🎵 Langkah 4: File Audio yang Diperlukan
 
 ### 4.1 File Audio Utama
-Letakkan file berikut di `/www/audio/cuaca/`:
+Letakkan file berikut di [`/www/audio/cuaca/`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/cuaca):
 
 | No | Nama File | Deskripsi |
 |----|-----------|------------|
@@ -187,11 +187,12 @@ Letakkan di `/www/audio/angka/`:
 - Pastikan kualitas audio jelas dan tidak ada noise
 - Durasi setiap file disarankan 1-3 detik untuk efisiensi
 - File tips tidak akan diputar pada malam hari (setelah jam 17:00 sampai 06:00)
+- untuk file bisa jadi Referensi di ambil [disini](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www)
 
 ## 🎵 Langkah 5: Script Utama
 
 ### 5.1 Buat File Script (`audio_berita-cuaca.sh`)
-Simpan script utama yang telah di unduh di `/www/assisten/Pulse-Audio-weather-notifications.sh`
+Simpan script utama yang telah di unduh di `/www/assisten/laporan/Pulse-Audio-weather-notifications.sh`
 
 ### 5.2 Berikan Hak Akses Eksekusi
 ```
