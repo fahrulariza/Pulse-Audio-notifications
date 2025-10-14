@@ -181,3 +181,10 @@ Letakkan di `/www/audio/angka/`:
 
 ### 5.1 Buat File Script (`audio_berita-cuaca.sh`)
 Simpan script utama yang telah di unduh di `/www/assisten/Pulse-Audio-weather-notifications.sh`
+
+### 5.1 5.2 Berikan Hak Akses Eksekusi
+```
+chmod +x /www/assisten/audio_berita-cuaca.sh
+```
+
+
