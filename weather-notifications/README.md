@@ -54,7 +54,7 @@ mkdir -p /www/assisten/laporan
 ## 📄 Langkah 3: File Konfigurasi
 
 <br>
-3.1 Buat File Konfigurasi (audio_berita-cuaca.txt)<br>
+### 3.1 Buat File Konfigurasi (audio_berita-cuaca.txt)<br>
 Simpan file berikut di /www/assisten/audio_berita-cuaca.txt:<br>
 
 ```
@@ -80,7 +80,7 @@ AUDIO_INTRO_SUHU="${AUDIO_ANGKA_DIR}/introsuhu.wav"
 AUDIO_DERAJAT_CELSIUS="${AUDIO_ANGKA_DIR}/derajat_celsius.wav"
 ```
 
-3.2 Penjelasan Konfigurasi
+### 3.2 Penjelasan Konfigurasi
 <br>
 3.2.1 <b>API_KEY</b>: Dapatkan dari Tomorrow.io<br>
 3.2.2 <b>LAT/LON</b>: Koordinat latitude dan longitude lokasi Anda<br>
