@@ -226,18 +226,19 @@ crontab -e
 
 ### 8.1 Error Umum dan Solusi
 
-Error: "File konfigurasi tidak ditemukan"
+Error: `"File konfigurasi tidak ditemukan"`
 - Pastikan file konfigurasi ada di direktori yang sama dengan script
 - Pastikan nama file sesuai (termasuk ekstensi .txt)
 
-Error: "Tidak ada respons dari API"
+Error: `"Tidak ada respons dari API"`
 - Periksa koneksi internet router
-- Pastikan API key valid dari Tomorrow.io
+- Pastikan API key valid dari [Tomorrow.io](https://www.tomorrow.io/)
 
-Error: "File audio tidak ditemukan"
+Error: `"File audio tidak ditemukan"`
 - Periksa struktur direktori audio
 - Pastikan semua file WAV sudah diupload
 
-Error: PulseAudio connection refused
-- Pastikan PulseAudio berjalan: pulseaudio --start
+Error: `PulseAudio connection refused`
+- Pastikan PulseAudio Terinstall dengan baik. Tutorial install [Pulseaudio](https://github.com/fahrulariza/OpenWRT-Pulse-Audio)
+- Pastikan PulseAudio berjalan: `pulseaudio --start`
 - Cek user permissions
