@@ -195,9 +195,9 @@ Simpan script utama yang telah di unduh di `/www/assisten/Pulse-Audio-weather-no
 
 ### 5.2 Berikan Hak Akses Eksekusi
 ```
-dos2unix /www/assisten/Pulse-Audio-weather-notifications.sh
-dos2unix /www/assisten/Pulse-Audio-weather-notifications.txt
-chmod +x /www/assisten/Pulse-Audio-weather-notifications.sh
+dos2unix /www/assisten/laporan/Pulse-Audio-weather-notifications.sh
+dos2unix /www/assisten/laporan/Pulse-Audio-weather-notifications.txt
+chmod +x /www/assisten/laporan/Pulse-Audio-weather-notifications.sh
 ```
 
 ## 🔧 Langkah 6: Testing
@@ -205,19 +205,36 @@ chmod +x /www/assisten/Pulse-Audio-weather-notifications.sh
 ### 6.1 Test Manual
 Jalankan script secara manual untuk testing:
 ```
-cd /www/assisten/
+cd /www/assisten/laporan/
 ./Pulse-Audio-weather-notifications.sh
 ```
 
 ### 6.2 Expected Output
 Jika berhasil, Anda akan melihat output seperti:
 ```
-Debug: Memuat konfigurasi dari: /www/assisten/Pulse-Audio-weather-notifications.txt
-Debug: Waktu siang (14:00), volume diatur ke 62768.
-Debug: Mencoba mengambil data dari Tomorrow.io: https://api.tomorrow.io/v4/timelines?...
-Debug: Suhu: 28.5
-Debug: Kode Cuaca: 1001
-Info: weatherCode tidak berubah (1001) dan bukan waktu wajib putar. Tidak memutar notifikasi.
+root@open-wrt:/# /www/assisten/laporan/audio_berita-cuaca.sh
+Debug: Memuat konfigurasi dari: /www/assisten/laporan/audio_berita-cuaca.txt
+Debug: Waktu saat ini (22:28) bukan waktu wajib putar.
+Debug: Kode Cuaca Terakhir Tersimpan: ''
+Debug: Kode Cuaca Saat Ini: '2100'
+Info: weatherCode baru (2100) disimpan ke /www/assisten/laporan/last_weather_code.txt.
+Debug: Tips tidak akan diputar karena ini adalah waktu malam/pagi.
+Cuaca di Rantau Pulut saat ini mendung sebagian, dengan suhu 24.2 derajat Celsius.
+Debug: File audio suhu:   /www/audio/angka/20.wav /www/audio/angka/4.wav /www/audio/angka/koma.wav /www/audio/angka/2.wav
+Mencoba memutar urutan audio...
+Urutan file: /www/audio/cuaca/lapor_berita_cuaca.wav /www/audio/cuaca/kondisi/mendung_sebagian.wav /www/audio/angka/introsuhu.wav   /www/audio/angka/20.wav /www/audio/angka/4.wav /www/audio/angka/koma.wav /www/audio/angka/2.wav /www/audio/angka/derajat_celsius.wav 
+Memutar: /www/audio/cuaca/lapor_berita_cuaca.wav
+Tue Oct 14 22:28:36 WIB 2025: Memeriksa status audio stream...
+Tue Oct 14 22:28:36 WIB 2025: DETEKSI: Tidak ada audio stream .wav aktif atau semua stream .wav ditangguhkan. Memutar audio...
+Memutar: /www/audio/cuaca/kondisi/mendung_sebagian.wav
+Memutar: /www/audio/angka/introsuhu.wav
+Memutar: /www/audio/angka/20.wav
+Memutar: /www/audio/angka/4.wav
+Memutar: /www/audio/angka/koma.wav
+Memutar: /www/audio/angka/2.wav
+Memutar: /www/audio/angka/derajat_celsius.wav
+Skrip selesai dijalankan.
+root@open-wrt:/# 
 ```
 
 ## ⏰ Langkah 7: Otomatisasi dengan Cron/scheduled Tasks
