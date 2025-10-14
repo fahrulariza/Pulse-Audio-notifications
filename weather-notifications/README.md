@@ -56,6 +56,7 @@ mkdir -p /www/assisten/laporan
 ## 📄 Langkah 3: File Konfigurasi
 
 <br>
+
 ### 3.1 Buat File Konfigurasi (Pulse-Audio-weather-notifications.txt)
 
 **Simpan file berikut di /www/assisten/Pulse-Audio-weather-notifications.txt:**<br>
@@ -106,6 +107,7 @@ AUDIO_DERAJAT_CELSIUS="${AUDIO_ANGKA_DIR}/derajat_celsius.wav"
 ## 🎵 Langkah 4: File Audio yang Diperlukan
 
 ### 4.1 File Audio Utama
+
 Letakkan file berikut di [`/www/audio/cuaca/`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/cuaca):
 
 | No | Nama File | Deskripsi |
@@ -187,7 +189,7 @@ Letakkan di `/www/audio/angka/`:
 - Pastikan kualitas audio jelas dan tidak ada noise
 - Durasi setiap file disarankan 1-3 detik untuk efisiensi
 - File tips tidak akan diputar pada malam hari (setelah jam 17:00 sampai 06:00)
-- untuk file bisa jadi Referensi di ambil [disini](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www)
+- untuk file bisa jadi Referensi di ambil [disini](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www) merupakan hasil dari suara AI
 
 ## 🎵 Langkah 5: Script Utama
 
