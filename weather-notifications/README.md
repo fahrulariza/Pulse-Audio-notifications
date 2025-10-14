@@ -23,11 +23,11 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi lay
 <br>
 1. Router dengan OpenWrt / Armbian<br>
 2. Koneksi internet aktif<br>
-3. Package curl
+3. Package curl<br>
 4. Pulseaudio terinstall dan berfungsi dengan baik. tutorialnya disini [here](https://github.com/fahrulariza/OpenWRT-Pulse-Audio/blob/master/README.md)
 <br>
 
-## 📁 Struktur Direktori
+## 📁 Langkah 2: Struktur Direktori
 
 Buat struktur direktori berikut di router OS OpenWrt / Armbian kamu seperti ini:<br>
 ```
@@ -48,3 +48,39 @@ mkdir -p /www/audio/cuaca/tips
 mkdir -p /www/audio/angka
 mkdir -p /www/assisten/laporan
 ```
+<br>
+## 📄 Langkah 3: File Konfigurasi
+3.1 Buat File Konfigurasi (audio_berita-cuaca.txt)<br>
+Simpan file berikut di /www/assisten/audio_berita-cuaca.txt:<br>
+
+```
+# Konfigurasi untuk Script Audio Berita Cuaca
+# File: audio_berita-cuaca.txt
+
+# --- KONFIGURASI API DAN LOKASI ---
+API_KEY="dJHoRVjW6vyAbgmIkPLlevA1Q"
+LAT="-1.923906"
+LON="112.117940"
+LOCATION_NAME="Rantau Pulut"
+LAST_WEATHER_FILE="/www/assisten/laporan/last_weather_code.txt"
+DEFAULT_VOLUME="62768"
+NIGHT_VOLUME="32768"
+
+# --- LOKASI FILE AUDIO ---
+AUDIO_DIR="/www/audio/cuaca"
+AUDIO_INTRO="${AUDIO_DIR}/lapor_berita_cuaca.wav"
+AUDIO_KONDISI_DIR="${AUDIO_DIR}/kondisi"
+AUDIO_TIPS_DIR="${AUDIO_DIR}/tips"
+AUDIO_ANGKA_DIR="/www/audio/angka"
+AUDIO_INTRO_SUHU="${AUDIO_ANGKA_DIR}/introsuhu.wav"
+AUDIO_DERAJAT_CELSIUS="${AUDIO_ANGKA_DIR}/derajat_celsius.wav"
+```
+
+3.2 Penjelasan Konfigurasi
+API_KEY: Dapatkan dari Tomorrow.io
+
+LAT/LON: Koordinat latitude dan longitude lokasi Anda
+
+LOCATION_NAME: Nama lokasi untuk laporan audio
+
+VOLUME: Sesuaikan volume sesuai kebutuhan (0-65536)
