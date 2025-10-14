@@ -201,7 +201,7 @@ cd /www/assisten/
 ### 6.2 Expected Output
 Jika berhasil, Anda akan melihat output seperti:
 ```
-Debug: Memuat konfigurasi dari: /www/assisten/audio_berita-cuaca.txt
+Debug: Memuat konfigurasi dari: /www/assisten/Pulse-Audio-weather-notifications.txt
 Debug: Waktu siang (14:00), volume diatur ke 62768.
 Debug: Mencoba mengambil data dari Tomorrow.io: https://api.tomorrow.io/v4/timelines?...
 Debug: Suhu: 28.5
@@ -209,5 +209,32 @@ Debug: Kode Cuaca: 1001
 Info: weatherCode tidak berubah (1001) dan bukan waktu wajib putar. Tidak memutar notifikasi.
 ```
 
-## ⏰ Langkah 7: Otomatisasi dengan Cron
+## ⏰ Langkah 7: Otomatisasi dengan Cron/scheduled Tasks
 
+### 7.1 Edit Crontab
+```
+crontab -e
+```
+
+### 7.2 Tambahkan Jadwal
+```
+# notifikasi cuaca otomatis setiap 15 menit
+*/15 * * * * /www/assisten/laporan/Pulse-Audio-weather-notifications.sh >/dev/null 2>&1
+```
+
+## 🐛 Langkah 8: Troubleshooting
+
+### 8.1 Error Umum dan Solusi
+
+Error: "File konfigurasi tidak ditemukan"
+- Pastikan file konfigurasi ada di direktori yang sama dengan script
+- Pastikan nama file sesuai (termasuk ekstensi .txt)
+Error: "Tidak ada respons dari API"
+- Periksa koneksi internet router
+- Pastikan API key valid dari Tomorrow.io
+Error: "File audio tidak ditemukan"
+- Periksa struktur direktori audio
+- Pastikan semua file WAV sudah diupload
+Error: PulseAudio connection refused
+- Pastikan PulseAudio berjalan: pulseaudio --start
+- Cek user permissions
