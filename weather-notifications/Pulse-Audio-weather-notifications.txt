@@ -1,0 +1,20 @@
+# Konfigurasi untuk Script Audio Berita Cuaca
+# File Format: txt
+
+# --- KONFIGURASI API DAN LOKASI ---
+API_KEY="dJHoRVjW6vyAbTrUkbPLlevA1Q"
+LAT="-1.923906"
+LON="112.117940"
+LOCATION_NAME="Rantau Pulut"
+LAST_WEATHER_FILE="/www/assisten/laporan/last_weather_code.txt"
+DEFAULT_VOLUME="62768"
+NIGHT_VOLUME="32768"
+
+# --- LOKASI FILE AUDIO ---
+AUDIO_DIR="/www/audio/cuaca"
+AUDIO_INTRO="${AUDIO_DIR}/lapor_berita_cuaca.wav"
+AUDIO_KONDISI_DIR="${AUDIO_DIR}/kondisi"
+AUDIO_TIPS_DIR="${AUDIO_DIR}/tips"
+AUDIO_ANGKA_DIR="/www/audio/angka"
+AUDIO_INTRO_SUHU="${AUDIO_ANGKA_DIR}/introsuhu.wav"
+AUDIO_DERAJAT_CELSIUS="${AUDIO_ANGKA_DIR}/derajat_celsius.wav"
