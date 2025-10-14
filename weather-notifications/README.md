@@ -43,6 +43,7 @@ Buat struktur direktori berikut di router OS OpenWrt / Armbian kamu seperti ini:
 ```
 <br>
 Perintah untuk Membuat Direktori:
+
 ```
 mkdir -p /www/audio/cuaca/kondisi
 mkdir -p /www/audio/cuaca/tips
@@ -81,8 +82,8 @@ AUDIO_DERAJAT_CELSIUS="${AUDIO_ANGKA_DIR}/derajat_celsius.wav"
 ```
 
 ### 3.2 Penjelasan Konfigurasi
-<br>
-3.2.1 <b>API_KEY</b>: Dapatkan dari Tomorrow.io<br>
-3.2.2 <b>LAT/LON</b>: Koordinat latitude dan longitude lokasi Anda<br>
-3.2.3 <b>LOCATION_NAME</b>: Nama lokasi untuk laporan audio<br>
-3.2.4 <b>VOLUME</b>: Sesuaikan volume sesuai kebutuhan (0-65536)<br>
+
+1. **API_KEY**: Dapatkan dari [Tomorrow.io](https://www.tomorrow.io/)
+2. **LAT/LON**: Koordinat latitude dan longitude lokasi Anda  
+3. **LOCATION_NAME**: Nama lokasi untuk laporan audio
+4. **VOLUME**: Sesuaikan volume sesuai kebutuhan (0-65536)
