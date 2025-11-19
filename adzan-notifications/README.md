@@ -225,15 +225,21 @@ Letakkan file al-quran difolder al-quran berikut di [`/www/audio/al-quran/`](htt
 
 | No | Nama File | Deskripsi |
 |----|-----------|------------|
-| 1 | audio-adzan.sh |------------|
-| 2 | audio-adzan-01.sh | Subuh |
-| 3 | audio-adzan-02.sh | Dzuhur/Ashar |
-| 4 | audio-adzan-03.sh | Maghrib |
-| 5 | audio-adzan-04.sh | Isya |
-| 6 | audio-adzan.config | konfigurasi |
-| 7 | generate_quran_durations.sh | Generated time Al-Quran |
-
+| 1 | audio-adzan.sh | updare jadwal online |
+| 2 | audio-adzan-01.sh | adzan Subuh |
+| 3 | audio-adzan-02.sh | adzan Dzuhur/Ashar |
+| 4 | audio-adzan-03.sh | adzan Maghrib |
+| 5 | audio-adzan-04.sh | adzan Isya |
+| 6 | audio-adzan.config | file konfigurasi |
+| 7 | generate_quran_durations.sh | Generated file and time file Al-Quran |
 Simpan semua script utama yang telah di unduh di `/www/adzan-script/`
+
+file yang dihasilkan 
+| No | Nama File | Deskripsi |
+|----|-----------|------------|
+| 1 | pages_per_track.json | file yang dihasilkan oleh generate_quran_durations.sh |
+| 2 | prayer_schedule.json | file yang dihasilkan oleh audio-adzan.sh|
+
 
 ### 5.2 Berikan Hak Akses Eksekusi
 ```
@@ -254,14 +260,14 @@ chmod +x /www/adzan-script/generate_quran_durations.sh
 
 ## 🔧 Langkah 6: Percobaan
 
-### 6.1.a Generate waktu dan nama setiap file wav di folder `/www/audio/al-quran/`
+### 6.1.a Generate waktu dan mendapatkan daftar nama setiap file wav di folder `/www/audio/al-quran/`
 ```
 cd /www/adzan-script/
 ./generate_quran_durations.sh
 ```
 
 ### 6.1.b Expected Output
-script ini dijalanakan cukup 1 kali jika tidak ada penambahan atau perubahan file di dalam folder al-quran
+script `generate_quran_durations.sh` ini dijalanakan cukup 1 kali jika tidak ada penambahan atau perubahan file di dalam folder al-quran
 Jika berhasil, Anda akan melihat output sampai selesai seperti:
 ```
 Wed Nov 19 23:47:55 WIB 2025: [INFO] Memulai generate_quran_durations.sh
