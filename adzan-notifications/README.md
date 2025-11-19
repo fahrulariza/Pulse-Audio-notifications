@@ -9,11 +9,11 @@
 ![Top Language](https://img.shields.io/github/languages/top/fahrulariza/Pulse-Audio-notifications)
 [![Open Issues](https://img.shields.io/github/issues/fahrulariza/Pulse-Audio-notifications)](https://github.com/fahrulariza/Pulse-Audio-notifications/issues)
 
-<h1>Notifikasi ADZAN menggunakan PulseAudio di Openwrt / Armbian</h1>
+<h1>Notifikasi ADZAN by aladhan.com menggunakan PulseAudio di Openwrt / Armbian</h1>
 <p>Kelola router OpenWrt dan Armbian Anda dengan mudah dan kreatif!</p>
 </div>
 
-Instalasi dan Konfigurasi Notifikasi suara Adzan menggunakan PulseAudio
+Instalasi dan Konfigurasi Notifikasi suara Adzan dari aladhan.com menggunakan PulseAudio
 Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi layanan audio di OpenWrt / Armbian.
 
 <p>
@@ -76,52 +76,104 @@ mkdir -p /www/audio/adzan-sound
 
 <br>
 
-### 3.1 Buat File Konfigurasi (Pulse-Audio-weather-notifications.txt)
+### 3.1 Buat File Konfigurasi (audio-adzan.config)
 
-**Simpan file berikut di /www/assisten/Pulse-Audio-weather-notifications.txt:**<br>
+**Simpan file berikut di /www/adzan-script/audio-adzan.config:**<br>
 
 ```
-# Konfigurasi untuk Script Audio Berita Cuaca
-# File: Pulse-Audio-weather-notifications.txt
-# github: https://github.com/fahrulariza
+# --- Konfigurasi Lokasi dan Metode Adzan ---
+CITY="Seruyan"
+COUNTRY="Indonesia"
+METHOD="20" # KEMENAG - Kementerian Agama Republik Indonesia
 
-# --- KONFIGURASI API DAN LOKASI ---
-API_KEY="dJHoRVjW6vyAbgmIkPLlevA1Q"
-LAT="-1.923906"
-LON="112.117940"
-LOCATION_NAME="Rantau Pulut"
-LAST_WEATHER_FILE="/www/assisten/laporan/last_weather_code.txt"
-DEFAULT_VOLUME="62768"
-NIGHT_VOLUME="32768"
+# Lokasi file audio adzan standar Anda
+AUDIO_ADZAN_DEFAULT="/www/audio/adzan.wav"
+# Lokasi file audio adzan khusus untuk Subuh
+AUDIO_ADZAN_FAJR="/www/audio/adzan2.wav"
+# Lokasi file audio doa setelah adzan
+AUDIO_SETELAH_ADZAN="/www/audio/adzan-doa_sesudah_adzan.wav"
 
-# --- LOKASI FILE AUDIO ---
-AUDIO_DIR="/www/audio/cuaca"
-AUDIO_INTRO="${AUDIO_DIR}/lapor_berita_cuaca.wav"
-AUDIO_KONDISI_DIR="${AUDIO_DIR}/kondisi"
-AUDIO_TIPS_DIR="${AUDIO_DIR}/tips"
-AUDIO_ANGKA_DIR="/www/audio/angka"
-AUDIO_INTRO_SUHU="${AUDIO_ANGKA_DIR}/introsuhu.wav"
-AUDIO_DERAJAT_CELSIUS="${AUDIO_ANGKA_DIR}/derajat_celsius.wav"
+# Durasi file audio adzan dalam detik untuk penjadwalan doa
+DURATION_ADZAN_DEFAULT_SECONDS=180 # Durasi adzan.wav (2 menit 13 detik)
+DURATION_ADZAN_FAJR_SECONDS=247 # Durasi adzan2.wav (3 menit 07 detik)
+
+AUDIO_ADZAN_JUMAT="/www/audio/adzan/adzan_jumat.wav"
+
+# --- PENTING: Variabel path untuk Al-Qur'an dan state file ---
+# Lokasi direktori tempat menyimpan file audio Al-Qur'an (misal: Page001.wav, Page002.wav, dst.)
+AUDIO_DIR_QURAN="/www/audio/al-quran"
+# Lokasi file untuk menyimpan halaman terakhir Al-Qur'an yang diputar
+QURAN_STATE_FILE="/www/assisten/laporan/quran_state.txt" # Disarankan menggunakan nama file yang unik
+# Lokasi file JSON yang berisi durasi setiap halaman Al-Qur'an
+PAGES_PER_TRACK_FILE="/www/audio/al-quran/pages_per_track.json"
+
+# --- Pengaturan Volume Audio ---
+# Volume untuk pemutaran audio Adzan (nilai antara 0 dan 65536, 65536 adalah 100%)
+# Ini adalah variabel 'AUDIO_VOLUME' yang Anda definisikan di bawah.
+# Saya mengubahnya menjadi VOLUME_ADZAN agar konsisten dengan nama variabel di skrip adzan.
+VOLUME_ADZAN=65536
+
+# Volume untuk pemutaran audio Al-Qur'an (bisa lebih tinggi dari 65536 jika PulseAudio diizinkan)
+VOLUME_QURAN=50536
+
+# Volume untuk audio lain-lain (doa, imsak, iqamah)
+VOLUME_AUDIO_LAIN=55536 # Contoh nilai, sesuaikan jika perlu
+
+# --- Konfigurasi Iqamah ---
+ADZAN_IQAMAH_ENABLED="ya"
+# Jeda waktu antara adzan dan iqamah (dalam detik)
+# ADZAN_IQAMAH=13 # Ini dalam menit, skrip expecting detik. Saya ubah menjadi ADZAN_IQAMAH_DELAY_SECONDS
+ADZAN_IQAMAH_DELAY_SECONDS=780 # 13 menit * 60 detik/menit
+# Lokasi file audio Iqamah
+AUDIO_IQAMAH="/www/audio/adzan-iqamah.wav" # Perbaiki nama variabelnya menjadi AUDIO_IQAMAH (sebelumnya AUDIO_ADZAN_IQAMAH)
+#Volume Suara Iqamah
+VOLUME_IQAMAH=55536
+
+# --- Konfigurasi Jadwal Sholat ---
+# Lokasi file untuk menyimpan jadwal adzan 10 hari
+SCHEDULE_FILE="/www/prayer_schedule.json" 
+# Jumlah hari ke depan yang akan diambil jadwalnya
+DAYS_AHEAD=20
+
+# --- Selisih Waktu Adzan (dalam menit) ---
+# Urutan: Imsak, Fajr, Sunrise, Dhuhr, Asr, Maghrib, Sunset, Isha, Midnight
+TUNE_IMSAK=2
+TUNE_FAJR=2
+TUNE_SUNRISE=-3
+TUNE_DHUHR=5
+TUNE_ASR=2
+TUNE_MAGHRIB=7
+TUNE_SUNSET=4
+TUNE_ISHA=7
+TUNE_MIDNIGHT=-36
+
+# --- Konfigurasi Notifikasi Imsak ---
+# Aktifkan notifikasi Imsak (ya/tidak)
+NOTIF_IMSAK="tidak"
+# Waktu jeda notifikasi Imsak sebelum Adzan Subuh (dalam menit)
+IMSAK_OFFSET_MINUTES=12
+# Lokasi file audio Imsak
+AUDIO_IMSAK="/www/audio/imsak.wav"
+# Volume untuk pemutaran audio Imsak (nilai antara 0 dan 65536, 65536 adalah 100%)
+IMSAK_VOLUME=65536
+
+# --- Lokasi File Log ---
+LOG_FILE="/var/log/audio-adzan.log"
 ```
 
 ### 3.2 Penjelasan Konfigurasi API dan Lokasi
 
 | No | Parameter | Penjelasan |
 |----|-----------|------------|
-| 1 | **API_KEY** | Dapatkan dari [Tomorrow.io](https://www.tomorrow.io/) |
-| 2 | **LAT/LON** | Koordinat latitude dan longitude lokasi Anda |
-| 3 | **LOCATION_NAME** | Nama lokasi untuk laporan audio |
-| 4 | **VOLUME** | Sesuaikan volume sesuai kebutuhan (0-65536) |
+| 1 | **API** | Dapatkan dari [Tomorrow.io](https://aladhan.com/prayer-times-api) |
+| 2 | **CITY** | Kota lokasi Anda |
+| 3 | **COUNTRY** | Negara |
+| 4 | **METHOD** | Sesuaikan volume sesuai kebutuhan (0-65536) |
 
 | No | Parameter | Penjelasan |
 |----|-----------|------------|
-| 1 | **AUDIO_DIR** | Lokasi Utama Audio Folder [`Cuaca`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/cuaca) |
-| 2 | **AUDIO_INTRO** | FILE Audio untuk intro Pembuka [`lapor_berita_cuaca.wav`](https://github.com/fahrulariza/Pulse-Audio-notifications/blob/master/www/audio/cuaca/lapor_berita_cuaca.wav) |
-| 3 | **AUDIO_KONDISI_DIR** | Lokasi Audio Folder [`Kondisi`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/cuaca/kondisi) |
-| 4 | **AUDIO_TIPS_DIR** | Lokasi Audio Folder [`tips`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/cuaca/tips) |
-| 2 | **AUDIO_ANGKA_DIR** | Lokasi Audio Folder [`angka`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/angka) |
-| 2 | **AUDIO_INTRO_SUHU** | FILE Audio untuk intro [`introsuhu.wav`](https://github.com/fahrulariza/Pulse-Audio-notifications/blob/master/www/audio/angka/introsuhu.wav) |
-| 2 | **AUDIO_DERAJAT_CELSIUS** | FILE Audio untuk intro [`derajat_celsius.wav`](https://github.com/fahrulariza/Pulse-Audio-notifications/blob/master/www/audio/angka/derajat_celsius.wav) |
+| 1 | **AUDIO_al-quran** | Lokasi Utama Audio al-quran [`Cuaca`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/al-quran) |
+| 2 | **AUDIO_adzan-sound** | FILE Audio untuk intro adzan [`lapor_berita_cuaca.wav`](https://github.com/fahrulariza/Pulse-Audio-notifications/blob/master/www/audio/adzan-sound) |
 
 ## 🎵 Langkah 4: File Audio yang Diperlukan
 
