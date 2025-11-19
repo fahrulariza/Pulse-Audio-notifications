@@ -252,16 +252,61 @@ chmod +x /www/adzan-script/generate_quran_durations.sh
 
 ```
 
-## 🔧 Langkah 6: Testing
+## 🔧 Langkah 6: Percobaan
 
-### 6.1 Test Manual
+### 6.1.a Generate waktu dan nama setiap file wav di folder `/www/audio/al-quran/`
+```
+cd /www/adzan-script/
+./generate_quran_durations.sh
+```
+
+### 6.1.b Expected Output
+script ini dijalanakan cukup 1 kali jika tidak ada penambahan atau perubahan file di dalam folder al-quran
+Jika berhasil, Anda akan melihat output sampai selesai seperti:
+```
+Wed Nov 19 23:47:55 WIB 2025: [INFO] Memulai generate_quran_durations.sh
+Wed Nov 19 23:47:55 WIB 2025: [DEBUG] Output sox mentah untuk Page001.wav: '00:00:28.08'
+Wed Nov 19 23:47:55 WIB 2025: [DEBUG] Durasi integer untuk Page001.wav: '28'
+Wed Nov 19 23:47:55 WIB 2025: [INFO] Memproses Page001.wav: 28s
+Wed Nov 19 23:47:55 WIB 2025: [DEBUG] Output sox mentah untuk Page002.wav: '00:01:36.02'
+Wed Nov 19 23:47:55 WIB 2025: [DEBUG] Durasi integer untuk Page002.wav: '96'
+Wed Nov 19 23:47:55 WIB 2025: [INFO] Memproses Page002.wav: 96s
+Wed Nov 19 23:47:55 WIB 2025: [DEBUG] Output sox mentah untuk Page003.wav: '00:02:41.46'
+Wed Nov 19 23:47:55 WIB 2025: [DEBUG] Durasi integer untuk Page003.wav: '161'
+Wed Nov 19 23:47:55 WIB 2025: [INFO] Memproses Page003.wav: 161s
+Wed Nov 19 23:47:55 WIB 2025: [DEBUG] Output sox mentah untuk Page004.wav: '00:03:42.78'
+Wed Nov 19 23:47:55 WIB 2025: [DEBUG] Durasi integer untuk Page004.wav: '223'
+Wed Nov 19 23:47:55 WIB 2025: [INFO] Memproses Page004.wav: 223s
+Wed Nov 19 23:47:55 WIB 2025: [DEBUG] Output sox mentah untuk Page005.wav: '00:04:36.56'
+Wed Nov 19 23:47:55 WIB 2025: [DEBUG] Durasi integer untuk Page005.wav: '277'
+Wed Nov 19 23:47:55 WIB 2025: [INFO] Memproses Page005.wav: 277s
+Wed Nov 19 23:47:55 WIB 2025: [DEBUG] Output sox mentah untuk Page006.wav: '00:02:01.15'
+Wed Nov 19 23:47:55 WIB 2025: [DEBUG] Durasi integer untuk Page006.wav: '121'
+Wed Nov 19 23:47:55 WIB 2025: [INFO] Memproses Page006.wav: 121s
+Wed Nov 19 23:48:17 WIB 2025: [DEBUG] Output sox mentah untuk Page601.wav: '00:00:55.55'
+Wed Nov 19 23:48:17 WIB 2025: [DEBUG] Durasi integer untuk Page601.wav: '56'
+Wed Nov 19 23:48:17 WIB 2025: [INFO] Memproses Page601.wav: 56s
+Wed Nov 19 23:48:17 WIB 2025: [DEBUG] Output sox mentah untuk Page602.wav: '00:01:16.26'
+Wed Nov 19 23:48:17 WIB 2025: [DEBUG] Durasi integer untuk Page602.wav: '76'
+Wed Nov 19 23:48:17 WIB 2025: [INFO] Memproses Page602.wav: 76s
+Wed Nov 19 23:48:17 WIB 2025: [DEBUG] Output sox mentah untuk Page603.wav: '00:00:22.75'
+Wed Nov 19 23:48:17 WIB 2025: [DEBUG] Durasi integer untuk Page603.wav: '23'
+Wed Nov 19 23:48:17 WIB 2025: [INFO] Memproses Page603.wav: 23s
+Wed Nov 19 23:48:17 WIB 2025: [DEBUG] Output sox mentah untuk Page604.wav: '00:00:47.12'
+Wed Nov 19 23:48:17 WIB 2025: [DEBUG] Durasi integer untuk Page604.wav: '47'
+Wed Nov 19 23:48:17 WIB 2025: [INFO] Memproses Page604.wav: 47s
+Wed Nov 19 23:48:17 WIB 2025: [INFO] File durasi Al-Qur'an berhasil dibuat/diperbarui: /www/audio/al-quran/pages_per_track.json
+Wed Nov 19 23:48:17 WIB 2025: [INFO] generate_quran_durations.sh selesai
+```
+
+### 6.2.a Test Manual
 Jalankan script secara manual untuk testing pengambilan jadwal:
 ```
 cd /www/adzan-script/
 ./audio-adzan.sh
 ```
 
-### 6.2 Expected Output
+### 6.2.b Expected Output
 Jika berhasil, Anda akan melihat output seperti:
 ```
 root@open-wrt:/# /www/adzan-script/audio-adzan.sh
