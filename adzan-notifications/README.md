@@ -189,30 +189,16 @@ Letakkan file adzan difolder adzan-sound berikut di [`/www/audio/adzan-sound/`](
 ### 4.2 File Audio bacaan Al-Quran
 Letakkan file al-quran difolder al-quran berikut di [`/www/audio/al-quran/`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/al-quran):
 
-| No | Nama File | Kode Cuaca | Deskripsi |
-|----|-----------|------------|------------|
-| 1 | **cerah.wav** | 1000 | Kondisi cerah |
-| 2 | **berawan.wav** | 1001 | Kondisi berawan |
-| 3 | **sebagian_besar_cerah.wav** | 1100 | Sebagian besar cerah |
-| 4 | **sebagian_besar_berawan.wav** | 1101 | Sebagian besar berawan |
-| 5 | **sebagian_berawan.wav** | 1102 | Sebagian berawan |
-| 6 | **mendung.wav** | 2000 | Kondisi mendung |
-| 7 | **mendung_sebagian.wav** | 2100 | Mendung sebagian |
-| 8 | **gerimis.wav** | 4000 | Hujan gerimis |
-| 9 | **hujan.wav** | 4001 | Hujan normal |
-| 10 | **hujan_ringan.wav** | 4200 | Hujan ringan |
-| 11 | **hujan_lebat.wav** | 4201 | Hujan lebat |
-| 12 | **salju.wav** | 5000 | Salju |
-| 13 | **salju_ringan.wav** | 5001 | Salju ringan |
-| 14 | **salju_lebat.wav** | 5100 | Salju lebat |
-| 15 | **hujan_es.wav** | 6000 | Hujan es |
-| 16 | **hujan_es_ringan.wav** | 6001 | Hujan es ringan |
-| 17 | **hujan_es_lebat.wav** | 6200 | Hujan es lebat |
-| 18 | **kabut.wav** | 7000 | Kabut |
-| 19 | **kabut_tipis.wav** | 7101 | Kabut tipis |
-| 20 | **kabut_lebat.wav** | 7102 | Kabut lebat |
-| 21 | **badai_petir.wav** | 8000 | Badai petir |
-| 22 | **default_unknown.wav** | * | Kondisi tidak diketahui |
+| No | Nama File |
+|----|-----------|
+| 1 | **Page001** |
+| 2 | **Page002** |
+| 3 | **Page003** |
+| 4 | **Page004** |
+| 5 | **Page005** |
+| 6 | **etc..** |
+| 7 | **Page603** |
+| 8 | **Page604** |
 
 **Catatan:** 
 - Semua file harus dalam format **WAV**
