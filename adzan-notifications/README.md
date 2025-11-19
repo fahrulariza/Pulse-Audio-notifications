@@ -9,7 +9,7 @@
 ![Top Language](https://img.shields.io/github/languages/top/fahrulariza/Pulse-Audio-notifications)
 [![Open Issues](https://img.shields.io/github/issues/fahrulariza/Pulse-Audio-notifications)](https://github.com/fahrulariza/Pulse-Audio-notifications/issues)
 
-<h1>Notifikasi Cuaca menggunakan PulseAudio di Openwrt / Armbian</h1>
+<h1>Notifikasi ADZAN menggunakan PulseAudio di Openwrt / Armbian</h1>
 <p>Kelola router OpenWrt dan Armbian Anda dengan mudah dan kreatif!</p>
 </div>
 
@@ -51,20 +51,24 @@ Buat struktur direktori berikut di router OS OpenWrt / Armbian kamu seperti ini:
 │   │   ├── Page003.wav/
 │   │   ├── etc../
 │   │   └── pages_per_track.json/
+|   |
 │   └── adzan-sound/
 │   │   ├── adzan.wav/
+│   │   ├── adzan2.wav/
+│   │   ├── adzan_jumat.wav/
 │   │   ├── adzan-iqamah.wav/
-└── assisten/
-    └── laporan/
+│   │   ├── adzan-iqamah02.wav/
+│   │   ├── imsak.wav/
+│   │   └── adzan-doa_sesudah_adzan.wav/
 ```
+
 <br>
 Perintah untuk Membuat Direktori:
 
 ```
-mkdir -p /www/audio/cuaca/kondisi
-mkdir -p /www/audio/cuaca/tips
-mkdir -p /www/audio/angka
-mkdir -p /www/assisten/laporan
+mkdir -p /www/adzan-script
+mkdir -p /www/audio/al-quran
+mkdir -p /www/audio/adzan-sound
 ```
 <br>
 
