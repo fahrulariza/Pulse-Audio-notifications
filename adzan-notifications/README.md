@@ -191,14 +191,14 @@ Letakkan file al-quran difolder al-quran berikut di [`/www/audio/al-quran/`](htt
 
 | No | Nama File |
 |----|-----------|
-| 1 | **Page001** |
-| 2 | **Page002** |
-| 3 | **Page003** |
-| 4 | **Page004** |
-| 5 | **Page005** |
+| 1 | **Page001.wav** |
+| 2 | **Page002.wav** |
+| 3 | **Page003.wav** |
+| 4 | **Page004.wav** |
+| 5 | **Page005.wav** |
 | 6 | **etc..** |
-| 7 | **Page603** |
-| 8 | **Page604** |
+| 7 | **Page603.wav** |
+| 8 | **Page604.wav** |
 
 **Catatan:** 
 - Semua file harus dalam format **WAV**
