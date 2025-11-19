@@ -224,6 +224,7 @@ Letakkan file al-quran difolder al-quran berikut di [`/www/audio/al-quran/`](htt
 ### 5.1 Penjelasan File Script
 
 | No | Nama File | Deskripsi |
+|----|-----------|------------|
 | 1 | audio-adzan.sh |------------|
 | 2 | audio-adzan-01.sh |------------|
 | 3 | audio-adzan-02.sh |------------|
