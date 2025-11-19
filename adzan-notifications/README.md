@@ -9,7 +9,7 @@
 ![Top Language](https://img.shields.io/github/languages/top/fahrulariza/Pulse-Audio-notifications)
 [![Open Issues](https://img.shields.io/github/issues/fahrulariza/Pulse-Audio-notifications)](https://github.com/fahrulariza/Pulse-Audio-notifications/issues)
 
-<h1>Notifikasi ADZAN by aladhan.com menggunakan PulseAudio di Openwrt / Armbian</h1>
+<h1>Notifikasi adzan by aladhan.com menggunakan PulseAudio di Openwrt / Armbian</h1>
 <p>Kelola router OpenWrt dan Armbian Anda dengan mudah dan kreatif!</p>
 </div>
 
@@ -221,17 +221,17 @@ Letakkan file al-quran difolder al-quran berikut di [`/www/audio/al-quran/`](htt
 
 ## 🎵 Langkah 5: Script Utama
 
-### 5.1 Penjelasan File Script
+### 5.1 Penjelasan File Script utama
 
 | No | Nama File | Deskripsi |
 |----|-----------|------------|
 | 1 | audio-adzan.sh |------------|
-| 2 | audio-adzan-01.sh |------------|
-| 3 | audio-adzan-02.sh |------------|
-| 4 | audio-adzan-03.sh |------------|
-| 5 | audio-adzan-04.sh |------------|
-| 6 | audio-adzan.config |------------|
-| 7 | generate_quran_durations.sh |------------|
+| 2 | audio-adzan-01.sh | Subuh |
+| 3 | audio-adzan-02.sh | Dzuhur/Ashar |
+| 4 | audio-adzan-03.sh | Maghrib |
+| 5 | audio-adzan-04.sh | Isya |
+| 6 | audio-adzan.config | konfigurasi |
+| 7 | generate_quran_durations.sh | Generated time Al-Quran |
 
 Simpan semua script utama yang telah di unduh di `/www/adzan-script/`
 
@@ -264,28 +264,50 @@ cd /www/adzan-script/
 ### 6.2 Expected Output
 Jika berhasil, Anda akan melihat output seperti:
 ```
-root@open-wrt:/# /www/assisten/laporan/audio_berita-cuaca.sh
-Debug: Memuat konfigurasi dari: /www/assisten/laporan/audio_berita-cuaca.txt
-Debug: Waktu saat ini (22:28) bukan waktu wajib putar.
-Debug: Kode Cuaca Terakhir Tersimpan: ''
-Debug: Kode Cuaca Saat Ini: '2100'
-Info: weatherCode baru (2100) disimpan ke /www/assisten/laporan/last_weather_code.txt.
-Debug: Tips tidak akan diputar karena ini adalah waktu malam/pagi.
-Cuaca di Rantau Pulut saat ini mendung sebagian, dengan suhu 24.2 derajat Celsius.
-Debug: File audio suhu:   /www/audio/angka/20.wav /www/audio/angka/4.wav /www/audio/angka/koma.wav /www/audio/angka/2.wav
-Mencoba memutar urutan audio...
-Urutan file: /www/audio/cuaca/lapor_berita_cuaca.wav /www/audio/cuaca/kondisi/mendung_sebagian.wav /www/audio/angka/introsuhu.wav   /www/audio/angka/20.wav /www/audio/angka/4.wav /www/audio/angka/koma.wav /www/audio/angka/2.wav /www/audio/angka/derajat_celsius.wav 
-Memutar: /www/audio/cuaca/lapor_berita_cuaca.wav
-Tue Oct 14 22:28:36 WIB 2025: Memeriksa status audio stream...
-Tue Oct 14 22:28:36 WIB 2025: DETEKSI: Tidak ada audio stream .wav aktif atau semua stream .wav ditangguhkan. Memutar audio...
-Memutar: /www/audio/cuaca/kondisi/mendung_sebagian.wav
-Memutar: /www/audio/angka/introsuhu.wav
-Memutar: /www/audio/angka/20.wav
-Memutar: /www/audio/angka/4.wav
-Memutar: /www/audio/angka/koma.wav
-Memutar: /www/audio/angka/2.wav
-Memutar: /www/audio/angka/derajat_celsius.wav
-Skrip selesai dijalankan.
+root@open-wrt:/# /www/adzan-script/audio-adzan.sh
+Wed Nov 19 23:21:49 WIB 2025: Memulai pembaruan jadwal adzan...
+Wed Nov 19 23:21:49 WIB 2025: Mencoba mengambil jadwal adzan per tanggal untuk 20 hari ke depan dari API...
+Wed Nov 19 23:21:49 WIB 2025: Mengambil data untuk 19 Nov 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:21:50 WIB 2025: Mengambil data untuk 20 Nov 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:21:51 WIB 2025: Mengambil data untuk 21 Nov 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:21:52 WIB 2025: Mengambil data untuk 22 Nov 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:21:53 WIB 2025: Mengambil data untuk 23 Nov 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:21:53 WIB 2025: Mengambil data untuk 24 Nov 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:21:54 WIB 2025: Mengambil data untuk 25 Nov 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:21:55 WIB 2025: Mengambil data untuk 26 Nov 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:21:56 WIB 2025: Mengambil data untuk 27 Nov 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:21:57 WIB 2025: Mengambil data untuk 28 Nov 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:21:58 WIB 2025: Mengambil data untuk 29 Nov 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:21:59 WIB 2025: Mengambil data untuk 30 Nov 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:22:00 WIB 2025: Mengambil data untuk 01 Dec 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:22:01 WIB 2025: Mengambil data untuk 02 Dec 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:22:02 WIB 2025: Mengambil data untuk 03 Dec 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:22:03 WIB 2025: Mengambil data untuk 04 Dec 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:22:04 WIB 2025: Mengambil data untuk 05 Dec 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:22:05 WIB 2025: Mengambil data untuk 06 Dec 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:22:05 WIB 2025: Mengambil data untuk 07 Dec 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:22:06 WIB 2025: Mengambil data untuk 08 Dec 2025 dari API Aladhan (By Address with tune)...
+Wed Nov 19 23:22:07 WIB 2025: Jadwal adzan untuk 20 hari berhasil diperbarui dan disimpan ke /www/prayer_schedule.json.
+Wed Nov 19 23:22:07 WIB 2025: Data waktu sholat berhasil diperoleh. Menghapus semua job 'at' yang ada...
+Wed Nov 19 23:22:07 WIB 2025: Job 'at' yang lama telah dihapus dan akan dijadwalkan ulang.
+--- Waktu Adzan Hari Ini ---
+Imsak:   03:38
+Subuh:   03:48
+Terbit:  05:05
+Dzuhur:  11:21
+Ashar:   14:42
+Maghrib: 17:31
+Sunset:  17:28
+Isya:    18:44
+Tengah Malam: 22:40
+----------------------------
+Wed Nov 19 23:22:08 WIB 2025: Notifikasi Imsak tidak diaktifkan.
+Wed Nov 19 23:22:08 WIB 2025: Waktu adzan Subuh (03:38) sudah lewat hari ini.
+Wed Nov 19 23:22:08 WIB 2025: [DEBUG - audio-adzan.sh] Hari ini bukan Jumat. Menjadwalkan Dzuhur 10 menit lebih awal.
+Wed Nov 19 23:22:08 WIB 2025: Waktu adzan Dzuhur (11:11) sudah lewat hari ini.
+Wed Nov 19 23:22:08 WIB 2025: Waktu adzan Ashar (14:32) sudah lewat hari ini.
+Wed Nov 19 23:22:08 WIB 2025: Waktu adzan Maghrib (17:01) sudah lewat hari ini.
+Wed Nov 19 23:22:08 WIB 2025: Waktu adzan Isya (18:34) sudah lewat hari ini.
 root@open-wrt:/# 
 ```
 
@@ -296,10 +318,13 @@ root@open-wrt:/#
 crontab -e
 ```
 
-### 7.2 Tambahkan Jadwal
+### 7.2 Tambahkan UPDATE JADWAL ADZAN SHOLAT
 ```
-# notifikasi cuaca otomatis setiap 15 menit
-*/15 * * * * /www/assisten/laporan/Pulse-Audio-weather-notifications.sh >/dev/null 2>&1
+# ======= UPDATE JADWAL ADZAN SHOLAT =========
+56 1,2,16,23 * * * rm -f /tmp/audio-adzan.log # hapus log audio-adzan.log
+56 1,2,16,23 * * * rm -f /var/log/audio-adzan.log # hapus log audio-adzan.log
+57 1,2,16,23 * * * /www/adzan-script/audio-adzan.sh >> /tmp/audio-adzan.log 2>&1
+#=============================================
 ```
 
 ## 🐛 Langkah 8: Troubleshooting
@@ -312,7 +337,7 @@ Error: `"File konfigurasi tidak ditemukan"`
 
 Error: `"Tidak ada respons dari API"`
 - Periksa koneksi internet router
-- Pastikan API key valid dari [Tomorrow.io](https://www.tomorrow.io/)
+- Pastikan API valid dari [aladhan.com](https://aladhan.com/)
 
 Error: `"File audio tidak ditemukan"`
 - Periksa struktur direktori audio
