@@ -232,13 +232,14 @@ Letakkan file al-quran difolder al-quran berikut di [`/www/audio/al-quran/`](htt
 | 5 | audio-adzan-04.sh | adzan Isya |
 | 6 | audio-adzan.config | file konfigurasi |
 | 7 | generate_quran_durations.sh | Generated file and time file Al-Quran |
+
 Simpan semua script utama yang telah di unduh di `/www/adzan-script/`
 
 file yang dihasilkan 
-| No | Nama File | Deskripsi |
-|----|-----------|------------|
-| 1 | pages_per_track.json | file yang dihasilkan oleh generate_quran_durations.sh |
-| 2 | prayer_schedule.json | file yang dihasilkan oleh audio-adzan.sh|
+| No | Nama File | Lokasi | Deskripsi |
+|----|-----------|------------|------------|
+| 1 | pages_per_track.json | /www/audio/al-quran/pages_per_track.json | file yang dihasilkan oleh generate_quran_durations.sh |
+| 2 | prayer_schedule.json | /www/prayer_schedule.json | file yang dihasilkan oleh audio-adzan.sh |
 
 
 ### 5.2 Berikan Hak Akses Eksekusi
