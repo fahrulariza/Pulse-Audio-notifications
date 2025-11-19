@@ -164,15 +164,15 @@ LOG_FILE="/var/log/audio-adzan.log"
 
 | No | Parameter | Penjelasan |
 |----|-----------|------------|
-| 1 | **API** | Dapatkan dari [aladhan.com](https://aladhan.com/prayer-times-api) |
+| 1 | **API** | Dapatkan dari [aladhan.com](https://aladhan.com/) |
 | 2 | **CITY** | Kota lokasi Anda |
 | 3 | **COUNTRY** | Negara |
 | 4 | **METHOD** | Sesuaikan volume sesuai kebutuhan (0-65536) |
 
 | No | Parameter | Penjelasan |
 |----|-----------|------------|
-| 1 | **AUDIO_al-quran** | Lokasi Utama Audio al-quran [`Cuaca`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/al-quran) |
-| 2 | **AUDIO_adzan-sound** | FILE Audio untuk intro adzan [`lapor_berita_cuaca.wav`](https://github.com/fahrulariza/Pulse-Audio-notifications/blob/master/www/audio/adzan-sound) |
+| 1 | **AUDIO_al-quran** | Lokasi Utama Audio al-quran [`al-quran`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/al-quran) |
+| 2 | **AUDIO_adzan-sound** | FILE Audio untuk intro adzan [`adzan`](https://github.com/fahrulariza/Pulse-Audio-notifications/blob/master/www/audio/adzan-sound) |
 
 ## 🎵 Langkah 4: File Audio yang Diperlukan
 
@@ -222,6 +222,7 @@ Letakkan file al-quran difolder al-quran berikut di [`/www/audio/al-quran/`](htt
 ## 🎵 Langkah 5: Script Utama
 
 ### 5.1 Penjelasan File Script
+
 | No | Nama File | Deskripsi |
 | 1 | audio-adzan.sh |------------|
 | 2 | audio-adzan-01.sh |------------|
@@ -235,18 +236,28 @@ Simpan semua script utama yang telah di unduh di `/www/adzan-script/`
 
 ### 5.2 Berikan Hak Akses Eksekusi
 ```
-dos2unix /www/assisten/laporan/Pulse-Audio-weather-notifications.sh
-dos2unix /www/assisten/laporan/Pulse-Audio-weather-notifications.txt
-chmod +x /www/assisten/laporan/Pulse-Audio-weather-notifications.sh
+dos2unix /www/adzan-script/audio-adzan.sh
+dos2unix /www/adzan-script/audio-adzan-01.sh
+dos2unix /www/adzan-script/audio-adzan-02.sh
+dos2unix /www/adzan-script/audio-adzan-03.sh
+dos2unix /www/adzan-script/audio-adzan-04.sh
+dos2unix /www/adzan-script/generate_quran_durations.sh
+chmod +x /www/adzan-script/audio-adzan.sh
+chmod +x /www/adzan-script/audio-adzan-01.sh
+chmod +x /www/adzan-script/audio-adzan-02.sh
+chmod +x /www/adzan-script/audio-adzan-03.sh
+chmod +x /www/adzan-script/audio-adzan-04.sh
+chmod +x /www/adzan-script/generate_quran_durations.sh
+
 ```
 
 ## 🔧 Langkah 6: Testing
 
 ### 6.1 Test Manual
-Jalankan script secara manual untuk testing:
+Jalankan script secara manual untuk testing pengambilan jadwal:
 ```
-cd /www/assisten/laporan/
-./Pulse-Audio-weather-notifications.sh
+cd /www/adzan-script/
+./audio-adzan.sh
 ```
 
 ### 6.2 Expected Output
