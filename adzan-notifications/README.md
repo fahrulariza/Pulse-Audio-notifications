@@ -414,7 +414,7 @@ root@open-wrt:/#
 crontab -e
 ```
 
-### 7.2 Tambahkan UPDATE JADWAL ADZAN SHOLAT di `crontab`
+### 7.2 Tambahkan UPDATE JADWAL ADZAN SHOLAT di `crontab`. jangan terlalu sering update, nanti di anggap spam. cukup 1 atau 2 kali setiap hari atau dijadwal ditanggal tertentu saja
 ```
 # ======= UPDATE JADWAL ADZAN SHOLAT =========
 56 1,23 * * * rm -f /tmp/audio-adzan.log # hapus log audio-adzan.log
