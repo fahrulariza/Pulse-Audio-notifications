@@ -9,7 +9,7 @@
 ![Top Language](https://img.shields.io/github/languages/top/fahrulariza/Pulse-Audio-notifications)
 [![Open Issues](https://img.shields.io/github/issues/fahrulariza/Pulse-Audio-notifications)](https://github.com/fahrulariza/Pulse-Audio-notifications/issues)
 
-<h1>Notifikasi adzan by aladhan.com menggunakan PulseAudio di Openwrt / Armbian</h1>
+<h1>Notifikasi adzan by aladhan.com menggunakan `PulseAudio` bluetooth speaker di Openwrt / Armbian</h1>
 <p>Kelola router OpenWrt dan Armbian Anda dengan mudah dan kreatif!</p>
 </div>
 
