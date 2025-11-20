@@ -29,6 +29,22 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi lay
 6. Package dos2unix
 7. Pulseaudio terinstall dan berfungsi dengan baik. [Tutorial install dan konfigurasi Pulseaudio](https://github.com/fahrulariza/OpenWRT-Pulse-Audio)
 
+<br>
+
+```
+opkg update
+opkg install at
+opkg install busybox
+opkg install jq
+opkg install wget
+opkg install curl
+opkg install sed
+opkg install awk
+opkg install grep
+opkg install findutils
+
+```
+
 ## 📁 Langkah 2: Struktur Direktori
 
 Buat struktur direktori berikut di router OS OpenWrt / Armbian kamu seperti ini:<br>
@@ -69,6 +85,7 @@ Perintah untuk Membuat Direktori:
 mkdir -p /www/adzan-script
 mkdir -p /www/audio/al-quran
 mkdir -p /www/audio/adzan-sound
+mkdir -p /var/log
 ```
 <br>
 
