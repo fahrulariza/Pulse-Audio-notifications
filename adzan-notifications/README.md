@@ -79,6 +79,7 @@ Perintah untuk install Package yang di perlukan:
 ```
 opkg update
 opkg install at
+opkg install dos2unix
 opkg install busybox
 opkg install jq
 opkg install wget
