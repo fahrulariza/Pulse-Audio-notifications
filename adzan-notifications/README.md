@@ -17,6 +17,14 @@ Instalasi dan Konfigurasi Notifikasi suara Adzan dari aladhan.com menggunakan Pu
 Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi layanan audio di OpenWrt / Armbian.
 
 <p>
+
+## 📋 Cara Kerja
+
+<br>
+Sistem adzan otomatis ini terdiri dari beberapa script yang bekerja bersama untuk:
+1. Mengambil jadwal sholat dari internet
+2. Menjadwalkan pemutaran adzan dan Al-Qur'an
+3. Memutar audio sesuai waktu sholat dengan manajemen state sesuai script
   
 ## 📋 Persyaratan Sistem
   
@@ -208,6 +216,16 @@ Letakkan file adzan difolder adzan-sound berikut di [`/www/audio/adzan-sound/`](
 
 ### 4.2 File Audio bacaan Al-Quran
 Letakkan file al-quran difolder al-quran berikut di [`/www/audio/al-quran/`](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/www/audio/al-quran):
+<br>
+
+Mekanisme Pemutaran Al-Qur'an
+<br>
+
+Fungsi `play_quran_timed()`
+- State Management: Menyimpan halaman terakhir yang diputar di `quran_state.txt`
+- Durasi Real: Menggunakan file JSON berisi durasi sebenarnya setiap halaman
+- Graceful Stop: Berhenti dengan rapi ketika waktu habis, bahkan di tengah halaman
+- Looping: Kembali ke halaman 1 setelah halaman 604
 
 | No | Nama File |
 |----|-----------|
@@ -232,10 +250,10 @@ Letakkan file al-quran difolder al-quran berikut di [`/www/audio/al-quran/`](htt
 | No | Nama File | Deskripsi |
 |----|-----------|------------|
 | 1 | audio-adzan.sh | updare jadwal online |
-| 2 | audio-adzan-01.sh | adzan Subuh |
-| 3 | audio-adzan-02.sh | adzan Dzuhur/Ashar |
-| 4 | audio-adzan-03.sh | adzan Maghrib |
-| 5 | audio-adzan-04.sh | adzan Isya |
+| 2 | audio-adzan-01.sh | notifikaci audio adzan Subuh |
+| 3 | audio-adzan-02.sh | notifikaci audio adzan Dzuhur/Ashar |
+| 4 | audio-adzan-03.sh | notifikaci audio adzan Maghrib |
+| 5 | audio-adzan-04.sh | notifikaci audio adzan Isya |
 | 6 | audio-adzan.config | file konfigurasi |
 | 7 | generate_quran_durations.sh | Generated file and time file Al-Quran |
 
@@ -245,8 +263,10 @@ file yang dihasilkan
 | No | Nama File | Lokasi | Deskripsi |
 |----|-----------|------------|------------|
 | 1 | pages_per_track.json | /www/audio/al-quran/pages_per_track.json | file yang dihasilkan oleh generate_quran_durations.sh |
-| 2 | prayer_schedule.json | /www/prayer_schedule.json | file yang dihasilkan oleh audio-adzan.sh |
+| 2 | prayer_schedule.json | /www/prayer_schedule.json | file yang dihasilkan oleh `audio-adzan.sh` dan sebagai cadangan untuk 20 hari kedepan jika gagal mengambil jadwal |
+| 3 | quran_state.txt | mencatat halaman terakhir yang diputar oleh fungsi `play_quran_timed()` |
 
+<br>
 
 ### 5.2 Berikan Hak Akses Eksekusi
 ```
