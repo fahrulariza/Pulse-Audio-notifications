@@ -414,7 +414,7 @@ root@open-wrt:/#
 crontab -e
 ```
 
-### 7.2 Tambahkan UPDATE JADWAL ADZAN SHOLAT
+### 7.2 Tambahkan UPDATE JADWAL ADZAN SHOLAT di `crontab`
 ```
 # ======= UPDATE JADWAL ADZAN SHOLAT =========
 56 1,23 * * * rm -f /tmp/audio-adzan.log # hapus log audio-adzan.log
