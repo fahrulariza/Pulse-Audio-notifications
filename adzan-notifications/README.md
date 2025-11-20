@@ -22,6 +22,7 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi lay
 
 <br>
 Sistem adzan otomatis ini terdiri dari beberapa script yang bekerja bersama untuk:
+
 1. Mengambil jadwal sholat dari internet
 2. Menjadwalkan pemutaran adzan dan Al-Qur'an
 3. Memutar audio sesuai waktu sholat dengan manajemen state sesuai script
@@ -259,12 +260,12 @@ Fungsi `play_quran_timed()`
 
 Simpan semua script utama yang telah di unduh di `/www/adzan-script/`
 
-file yang dihasilkan 
+beberapa file yang dihasilkan 
 | No | Nama File | Lokasi | Deskripsi |
 |----|-----------|------------|------------|
 | 1 | pages_per_track.json | /www/audio/al-quran/pages_per_track.json | file yang dihasilkan oleh generate_quran_durations.sh |
 | 2 | prayer_schedule.json | /www/prayer_schedule.json | file yang dihasilkan oleh `audio-adzan.sh` dan sebagai cadangan untuk 20 hari kedepan jika gagal mengambil jadwal |
-| 3 | quran_state.txt | mencatat halaman terakhir yang diputar oleh fungsi `play_quran_timed()` |
+| 3 | quran_state.txt | `audio-adzan.config` /www/adzan-script/quran_state.txt | mencatat Progress halaman terakhir yang diputar oleh fungsi `play_quran_timed()` yang ada di dalam script-script adzan |
 
 <br>
 
