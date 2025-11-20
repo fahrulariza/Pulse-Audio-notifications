@@ -264,13 +264,13 @@ chmod +x /www/adzan-script/generate_quran_durations.sh
 
 ## 🔧 Langkah 6: Percobaan
 
-### 6.1.a Generate waktu dan mendapatkan daftar nama setiap file wav di folder `/www/audio/al-quran/`
+### 6.1 Generate waktu dan mendapatkan daftar nama setiap file wav di folder `/www/audio/al-quran/`
 ```
 cd /www/adzan-script/
 ./generate_quran_durations.sh
 ```
 
-### 6.1.b Expected Output
+### Expected Output
 script `generate_quran_durations.sh` ini dijalanakan cukup 1 kali jika tidak ada penambahan atau perubahan file di dalam folder al-quran
 Jika berhasil, Anda akan melihat output sampai selesai seperti:
 ```
@@ -309,14 +309,16 @@ Wed Nov 19 23:48:17 WIB 2025: [INFO] File durasi Al-Qur'an berhasil dibuat/diper
 Wed Nov 19 23:48:17 WIB 2025: [INFO] generate_quran_durations.sh selesai
 ```
 
-### 6.2.a Test Manual
+<br>
+
+### 6.2 Test Manual
 Jalankan script secara manual untuk testing pengambilan jadwal:
 ```
 cd /www/adzan-script/
 ./audio-adzan.sh
 ```
 
-### 6.2.b Expected Output
+### Expected Output
 Jika berhasil, Anda akan melihat output seperti:
 ```
 root@open-wrt:/# /www/adzan-script/audio-adzan.sh
@@ -365,6 +367,20 @@ Wed Nov 19 23:22:08 WIB 2025: Waktu adzan Maghrib (17:01) sudah lewat hari ini.
 Wed Nov 19 23:22:08 WIB 2025: Waktu adzan Isya (18:34) sudah lewat hari ini.
 root@open-wrt:/# 
 ```
+
+<br>
+
+### 6.3 cek jadwal
+akan tampil di `atq` untuk jadwal notifikasi adzan:
+```
+root@open-wrt:/# atq
+10      Thu Nov 20 18:34:00 2025 a root
+9       Thu Nov 20 17:01:00 2025 a root
+8       Thu Nov 20 14:32:00 2025 a root
+root@open-wrt:/# 
+```
+
+<br>
 
 ## ⏰ Langkah 7: Otomatisasi dengan Cron/scheduled Tasks
 
