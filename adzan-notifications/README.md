@@ -417,9 +417,9 @@ crontab -e
 ### 7.2 Tambahkan UPDATE JADWAL ADZAN SHOLAT
 ```
 # ======= UPDATE JADWAL ADZAN SHOLAT =========
-56 1,2,16,23 * * * rm -f /tmp/audio-adzan.log # hapus log audio-adzan.log
-56 1,2,16,23 * * * rm -f /var/log/audio-adzan.log # hapus log audio-adzan.log
-57 1,2,16,23 * * * /www/adzan-script/audio-adzan.sh >> /tmp/audio-adzan.log 2>&1
+56 1,23 * * * rm -f /tmp/audio-adzan.log # hapus log audio-adzan.log
+56 1,23 * * * rm -f /var/log/audio-adzan.log # hapus log audio-adzan.log
+57 1,23 * * * /www/adzan-script/audio-adzan.sh >> /tmp/audio-adzan.log 2>&1
 #=============================================
 ```
 
