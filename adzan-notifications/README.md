@@ -31,20 +31,6 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi lay
 
 <br>
 
-```
-opkg update
-opkg install at
-opkg install busybox
-opkg install jq
-opkg install wget
-opkg install curl
-opkg install sed
-opkg install awk
-opkg install grep
-opkg install findutils
-
-```
-
 ## 📁 Langkah 2: Struktur Direktori
 
 Buat struktur direktori berikut di router OS OpenWrt / Armbian kamu seperti ini:<br>
@@ -76,6 +62,23 @@ Buat struktur direktori berikut di router OS OpenWrt / Armbian kamu seperti ini:
 │   │   ├── adzan-iqamah02.wav/
 │   │   ├── imsak.wav/
 │   │   └── adzan-doa_sesudah_adzan.wav/
+```
+
+<br>
+Perintah untuk install Package yang di perlukan:
+
+```
+opkg update
+opkg install at
+opkg install busybox
+opkg install jq
+opkg install wget
+opkg install curl
+opkg install sed
+opkg install awk
+opkg install grep
+opkg install findutils
+
 ```
 
 <br>
