@@ -20,7 +20,7 @@
 
 ## 🚀 Script Notifikasi
 - [**Notifikasi Cuara**](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/weather-notifications)
-- **Audio Adzan**
+- [**Audio Adzan**](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/adzan-notifications)
 - **Alarm Koneksi Internet**
 - **Smart IOT**
 - **dan lain-lainnya**
